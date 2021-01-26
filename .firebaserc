@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "wzbm-15e1e"
+  },
+  "targets": {
+    "wzbm-15e1e": {
+      "hosting": {
+        "frontend": [
+          "wzbm-15e1e"
+        ]
+      }
+    }
+  }
+}
