@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import firebase from 'firebase/app';
 import { Observable } from 'rxjs';
+import { AppUser } from '../models/app-user';
 
 @Component({
   selector: 'bs-navbar',
@@ -10,9 +11,10 @@ import { Observable } from 'rxjs';
   styleUrls: ['./bs-navbar.component.css'],
 })
 export class BsNavbarComponent {
+  appUser: AppUser;
 
-  constructor(public auth: AuthService) {
-    
+  constructor(private auth: AuthService) {
+    auth.appUser$.subscribe(appUser => this.appUser = appUser);
   }
 
   logout() {
