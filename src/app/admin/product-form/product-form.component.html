@@ -1,0 +1,104 @@
+
+
+
+<form>
+    <div class="form-group">
+        <label for="pictureNum">Bild-Code</label>
+        <input ngModel name="pictureNum" id="pictureNum" type="Number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="title">LEBENSMITTEL NAME</label>
+        <input ngModel name="title" id="title" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="volume">Volume</label>
+        <input ngModel name="volume" id="volume" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="category">Category</label>
+        <select ngModel name="category" name="category" id="category" class="form-control">
+            <option value=""></option>
+            <option *ngFor="let c of categories$ | async" [value]="c.$key">
+                {{ c.name }}
+            </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="energieKJ">Energie (kJ) je 100 g</label>
+        <input ngModel name="energieKJ" id="energieKJ" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="energieKcal">Energie (kcal) je 100 g</label>
+        <input ngModel name="energieKcal" id="energieKcal" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="fettJe">Fett je 100 g</label>
+        <input ngModel name="fettJe" id="fettJe" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="davonGes">davon ges. Fettsäuren je 100 g</label>
+        <input ngModel name="davonGes" id="davonGes" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="kohlenhydrate">Kohlenhydrate je 100 g</label>
+        <input ngModel name="kohlenhydrate" id="kohlenhydrate" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="davonZucker">davon Zucker je 100 g</label>
+        <input ngModel name="kohlenhydrate" id="davonZucker" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="ballaststoffe">Ballaststoffe je 100 g</label>
+        <input ngModel name="ballaststoffe" id="ballaststoffe" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="eiweiß">Eiweiß je 100 g</label>
+        <input ngModel name="eiweiß" id="eiweiß" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="salz-je">Salz je 100 g</label>
+            <input id="salz-je" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="EnergieKjPro">Energie (kJ) pro Riegel</label>
+            <input ngModel name="EnergieKjPro" id="EnergieKjPro" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="EnergieKcalPro">Energie (kcal) pro Riegel</label>
+        <input ngModel name="EnergieKcalPro" id="EnergieKcalPro" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="fettPro">Fett pro Riegel</label>
+        <input ngModel name="fettPro" id="fettPro" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="davonGesPro">Davon ges. Fettsäuren pro Riegel</label>
+        <input ngModel name="davonGesPro" id="davonGesPro" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="kohlenhydratePro">Kohlenhydrate pro Riegel</label>
+        <input ngModel name="kohlenhydratePro" id="kohlenhydratePro" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="davonZuckerPro">Davon Zucker pro Riegel</label>
+        <input ngModel name="davonZuckerPro" id="davonZuckerPro" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="ballaststoffe-pro">Ballaststoffe pro Riegel</label>
+        <input id="ballaststoffe-pro" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="eiweißPro">Eiweiß pro Riegel</label>
+        <input ngModel name="eiweißPro" id="eiweißPro" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="salzPro">Salz pro Riegel</label>
+        <input ngModel name="salzPro" id="salzPro" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="imageUrl">Image URL</label>
+        <input ngModel name="imageUrl" id="imageUrl" type="text" class="form-control">
+    </div>
+    <button class="btn btn-primary">Save</button>
+
+</form>
