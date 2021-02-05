@@ -9,10 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class ProductFormComponent implements OnInit {
   categories$;
 
-  constructor(private categoryService: CategoryService) {
-    this.categories$ = categoryService.getCategories(); 
+  constructor(categoryService: CategoryService) {
+    this.categories$ = categoryService.getCategories();
+    console.log(this.categories$);
   }
 
   ngOnInit(): void {}
-
 }
