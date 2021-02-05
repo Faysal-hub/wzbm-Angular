@@ -1,7 +1,7 @@
 
 
 
-<form>
+<form #f="ngForm" (ngSubmit)="save(f.value)">
     <div class="form-group">
         <label for="pictureNum">Bild-Code</label>
         <input ngModel name="pictureNum" id="pictureNum" type="Number" class="form-control">
@@ -55,7 +55,7 @@
     </div>
     <div class="form-group">
         <label for="davonZucker">davon Zucker je 100 g</label>
-        <input ngModel name="kohlenhydrate" id="davonZucker" type="number" class="form-control">
+        <input ngModel name="davonZucker" id="davonZucker" type="number" class="form-control">
     </div>
     <div class="form-group">
         <label for="ballaststoffe">Ballaststoffe je 100 g</label>

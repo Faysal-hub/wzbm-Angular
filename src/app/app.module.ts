@@ -1,3 +1,4 @@
+import { ProductService } from './product.service';
 import { CategoryService } from './category.service';
 import { AdminAuthGuardService } from './admin-auth-guard.service';
 import { UserService } from './user.service';
@@ -98,6 +99,7 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
     UserService,
     AdminAuthGuardService,
     CategoryService,
+    ProductService,
   ],
   bootstrap: [AppComponent],
 })
