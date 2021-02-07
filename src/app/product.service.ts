@@ -12,7 +12,6 @@ export class ProductService {
   getAll() {
     return this.db
       .list('/products')
-      .valueChanges(undefined, { idField: '$key' });
   }
 
   get(productId) {

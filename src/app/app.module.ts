@@ -10,6 +10,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms'
 
+import { DataTablesModule } from 'angular-datatables';
+
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
@@ -50,6 +52,7 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
   imports: [
     BrowserModule,
     FormsModule,
+    DataTablesModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth

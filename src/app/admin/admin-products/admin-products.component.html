@@ -7,7 +7,7 @@
     <input #query (keyup)="filter(query.value)" type="text" class="form-control" placeholder="Search...">
 </p>
 
-<table class="table">
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
     <thead>
         <tr>
             <th>Bild-Code</th>
