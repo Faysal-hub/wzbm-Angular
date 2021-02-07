@@ -12,15 +12,15 @@
         <tr>
             <th>Bild-Code</th>
             <th>Title</th>
-            <th>Volume</th>
+            <th>Volume(Gram)</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let p of filteredProducts">
-            <td>{{ p.pictureNum }}</td>
-            <td>{{ p.title}}</td>
-            <td>{{ p.volume}}</td>
+            <td>{{p.pictureNum}}</td>
+            <td>{{p.title}}</td>
+            <td>{{p.volume}}</td>
             <td>
                 <a [routerLink]="['/admin/products/', p.$key]">Edit</a>
             </td>
