@@ -15,7 +15,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
   products: Product[] = [];
   filteredProducts: Product[] = [];
   category: string;
-  cart;
+  cart: any;
   subscription: Subscription;
 
   constructor(
@@ -23,6 +23,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
     productService: ProductService,
     private shoppingCartService: ShoppingCartService
   ) {
+    
     productService
       .getAll()
       .snapshotChanges()
@@ -59,4 +60,5 @@ export class ProductsComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
+
 }
