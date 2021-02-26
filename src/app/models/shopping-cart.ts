@@ -1,14 +1,13 @@
-import { ShoppingCartItem } from "./shopping-cart-item";
-
+import { ShoppingCartItem } from './shopping-cart-item';
 
 export interface ShoppingCart {
-    items: ShoppingCartItem[];
+  items: ShoppingCartItem[];
 
-    // get totalItemsCount(){
-    //    let count = 0;
-    //    for (const productId in this.items) {
-    //      count += this.items[productId].quantity;
-    //      return count
-    //    }
-    // }
+//   get totalItemsCount(){
+//       this.shoppingCartItemCount = 0;
+//        const items = cart.payload.val().items;
+//        for (const productId in items) {
+//          this.shoppingCartItemCount += items[productId].quantity;
+//        }
+//   }
 }

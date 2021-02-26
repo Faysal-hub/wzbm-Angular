@@ -7,6 +7,8 @@ import { AuthService } from './auth.service';
 import { AuthGuardService } from './auth-guard.service';
 import { environment } from '../environments/environment';
 
+import { CountdownModule } from 'ngx-countdown';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms'
@@ -56,6 +58,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
   ],
   imports: [
     BrowserModule,
+    CountdownModule,
     FormsModule,
     DataTablesModule,
     AngularFireModule.initializeApp(environment.firebase),
