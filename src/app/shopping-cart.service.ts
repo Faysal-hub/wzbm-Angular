@@ -3,6 +3,7 @@ import { Product } from './models/product';
 import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
 import { Injectable } from '@angular/core';
 import { ShoppingCart } from './models/shopping-cart';
+import { v4 as uuid } from 'uuid';
 
 @Injectable()
 export class ShoppingCartService {
@@ -58,6 +59,7 @@ export class ShoppingCartService {
 
     let result = await this.create();
     localStorage.setItem('cartId', result.key);
+    console.log(result);
     return result.key;
   }
 
